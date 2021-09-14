@@ -1,0 +1,25 @@
+{
+  "name": "waafipay/waafipay-sdk-php",
+  "description": "Waafipay PHP Library",
+  "keywords": ["Waafipay","Client","SDK","PHP"],
+  "authors": [
+    {
+      "name": "Abdulkareem/Nadeem",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "https://developer.safarifoneict.com/",
+  "require": {
+    "php": ">=5.6.0",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "ext-openssl": "*",
+    "netresearch/jsonmapper": "^1.4",
+    "monolog/monolog": "^1.24"
+  },
+  "autoload": {
+    "psr-4": {
+      "waafipay\\": "src/"
+    }
+  }
+}
