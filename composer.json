@@ -1,5 +1,5 @@
 {
-  "name": "waafipay/waafipay-sdk-php",
+  "name": "waafipay/sdk-php",
   "description": "Waafipay PHP Library",
   "keywords": ["Waafipay","Client","SDK","PHP"],
   "authors": [
