@@ -4,11 +4,11 @@
   "keywords": ["Waafipay","Client","SDK","PHP"],
   "authors": [
     {
-      "name": "Abdulkareem/Nadeem",
+      "name": "Safarifone ICT",
       "role": "Developer"
     }
   ],
-  "homepage": "https://developer.safarifoneict.com/",
+  "homepage": "https://developer.waafipay.net/",
   "require": {
     "php": ">=5.6.0",
     "ext-json": "*",
