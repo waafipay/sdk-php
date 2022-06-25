@@ -97,6 +97,7 @@
             if ($hppUrl == null || empty($hppUrl)) {
                 LoggingUtil::addLog(LogLevel::INFO, __CLASS__, $responseMsg .
                     "as responseData->getBody is null and raw json received is: " . $rawJsonResponse);
+		return new SDKResponse($responseObj, $rawJsonResponse);	    
                 throw new Exception($responseMsg);
             }
 
@@ -211,6 +212,7 @@
             if ($transactionId == null || empty($transactionId)) {
                 LoggingUtil::addLog(LogLevel::INFO, __CLASS__, $responseMsg .
                     "as responseData->getBody is null and raw json received is: " . $rawJsonResponse);
+		return new SDKResponse($responseObj, $rawJsonResponse);	
                 throw new Exception($responseMsg);
             }
 
@@ -269,6 +271,7 @@
             if ($responseCode == null || empty($responseCode)) {
                 LoggingUtil::addLog(LogLevel::INFO, __CLASS__, $responseMsg .
                     "as responseData->getBody is null and raw json received is: " . $rawJsonResponse);
+		return new SDKResponse($responseObj, $rawJsonResponse);	
                 throw new Exception($responseMsg);
             }
 
@@ -319,6 +322,7 @@
             } else {
                 $error = "CURL Error:";
                 LoggingUtil::addLog(LogLevel::ERROR, __CLASS__, "API Communication Error: " . $error);
+		return $jsonResponse;
                 throw new SDKException("API Communication Error" . $error);
             }
             return $jsonResponse;
