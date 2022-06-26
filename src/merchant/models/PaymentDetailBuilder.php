@@ -52,10 +52,13 @@
          * PaymentDetailBuilder constructor.
          * @throws \Exception
          */
-        public function __construct($channelId, $paymentMethod, $transactionInfo, $payerInfo)
+        public function __construct($channelId, $paymentMethod, $orderId, $transactionInfo, $payerInfo)
         {
             if (CommonUtil::checkStringForEmptyOrNull($channelId)) {
                 throw new SDKException("ChannelId can not be null or empty");
+            }
+            elseif (CommonUtil::checkStringForEmptyOrNull($orderId)) {
+                throw new SDKException("OrderId can not be null or empty");
             }
 			elseif (CommonUtil::checkStringForEmptyOrNull($paymentMethod)) {
                 throw new SDKException("PaymentMethod can not be null or empty");
@@ -69,7 +72,7 @@
             else {
                 $this->channelId = $channelId;
                 $this->paymentMethod = $paymentMethod;
-                $this->orderId = 'RPHWP'.time();
+                $this->orderId = $orderId;
                 $this->transactionInfo = $transactionInfo;
                 $this->payerInfo = $payerInfo;
             }
