@@ -45,17 +45,20 @@
          * PaymentCommitDetailBuilder constructor.
          * @throws \Exception
          */
-        public function __construct($channelId, $serviceParams)
+        public function __construct($channelId, $orderId, $serviceParams)
         {
             if (CommonUtil::checkStringForEmptyOrNull($channelId)) {
                 throw new SDKException("ChannelId can not be null or empty");
+            }
+            elseif (CommonUtil::checkStringForEmptyOrNull($orderId)) {
+                throw new SDKException("OrderId can not be null or empty");
             }
             elseif (!$serviceParams instanceof ServiceParams) {
                 throw new SDKException("ServiceParams Info should be of type Waafipay\pg\models\ServiceParams");
             }
             else {
                 $this->channelId = $channelId;
-                $this->orderId = 'RPHWP'.time();
+                $this->orderId = $orderId;
                 $this->serviceParams = $serviceParams;
             }
         }
