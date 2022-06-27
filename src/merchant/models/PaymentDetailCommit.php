@@ -5,7 +5,7 @@
 
     namespace waafipay\merchant\models;
 
-    use waafipay\merchant\models\PaymentDetailCommit\paymentCommitDetailBuilder;
+    use waafipay\merchant\models\PaymentDetailCommit\PaymentCommitDetailBuilder;
     use waafipay\pg\constants\LibraryConstants;
     use waafipay\pg\constants\MerchantProperties;
     use waafipay\pg\models\ServiceParams;
