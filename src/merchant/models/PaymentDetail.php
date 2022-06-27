@@ -139,7 +139,7 @@
 
     namespace waafipay\merchant\models\PaymentDetail;
 
-    use waafipay\merchant\models\paymentDetail;
+    use waafipay\merchant\models\PaymentDetail;
     use waafipay\pg\exceptions\SDKException;
     use waafipay\pg\models\PayerInfo;
     use waafipay\pg\models\TransactionInfo;
