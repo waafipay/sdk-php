@@ -1,5 +1,5 @@
 {
-  "name": "waafipay/waafipay-sdk-php",
+  "name": "sarwar/waafipay-sdk-php",
   "description": "Waafipay PHP Library",
   "keywords": ["Waafipay","Client","SDK","PHP"],
   "authors": [
@@ -14,8 +14,7 @@
     "ext-json": "*",
     "ext-curl": "*",
     "ext-openssl": "*",
-    "netresearch/jsonmapper": "^1.4",
-    "monolog/monolog": "^2.9.1"
+    "netresearch/jsonmapper": "^1.4"
   },
   "autoload": {
     "psr-4": {
